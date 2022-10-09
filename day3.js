@@ -49,31 +49,6 @@ function convertArrayToObject() {
     }
 
 
-    /* {
-			name: 'David',
-			age: 25,
-			skills: {
-				frontEnd: [
-					{skill: 'HTML',level: 10},
-					{skill: 'CSS',level: 8},
-					{skill: 'JS',level: 8},
-					{skill: 'React',level: 9},
-					{skill: 'BootStrap',level: 8}
-				],
-				backEnd: [
-					{skill: 'Node',level: 7},
-					{skill: 'GraphQL',level: 8},
-					{skill: 'Express',level: 9}
-				],
-				dataBase: [
-					{ skill: 'MongoDB',level: 7.5},
-					{ skill: 'SQL',level: 8}
-				],
-				dataScience: ['Python','R','D3.js','SQL']
-			}
-		}+ */
-
-
 const newStudent = {...student};
 newStudent.skills.frontEnd.push({skill: 'Bootstrap', lavel: 8});
 newStudent.skills.backEnd.push({skill: 'Express', lavel: 9});
