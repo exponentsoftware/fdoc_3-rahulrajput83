@@ -80,3 +80,91 @@ Object.keys(newStudent).forEach(() => {
 /* c. */ console.log(Object.values(newStudent.skills).length);
 /* d. */ console.log(newStudent.hasOwnProperty('graphicDesign'));
 /* e. */ Object.keys(newStudent).forEach((e) => console.log(e));
+
+
+
+
+/* Q2. */
+
+
+const users = [
+    {
+            _id: 'ab12ex',
+            username: 'Alex',
+            email: 'alex@alex.com',
+            password: '123123',
+            createdAt:'17/05/2019 9:00 AM',
+            isLoggedIn: false
+    },
+    {
+            _id: 'fg12cy',
+            username: 'Asab',
+            email: 'asab@asab.com',
+            password: '123456',
+            createdAt:'17/05/2019 9:30 AM',
+            isLoggedIn: true
+    },
+    {
+            _id: 'zwf8md',
+            username: 'Brook',
+            email: 'brook@brook.com',
+            password: '123111',
+            createdAt:'17/05/2019 9:45 AM',
+            isLoggedIn: true
+    },
+    {
+            _id: 'eefamr',
+            username: 'Martha',
+            email: 'martha@martha.com',
+            password: '123222',
+            createdAt:'17/05/2019 9:50 AM',
+            isLoggedIn: false
+    },
+    {
+            _id: 'ghderc',
+            username: 'Thomas',
+            email: 'thomas@thomas.com',
+            password: '123333',
+            createdAt:'17/05/2019 10:00 AM',
+            isLoggedIn: false
+    }
+    ];
+
+
+/* a. */
+/* a. */
+function signUp(name, email, password){
+    for(let i = 0; i < users.length; i++ ) {
+        if(users[i].email === email){
+            return `Already Registered ${users[i]}`
+        }
+    }
+    users.push({
+        _id: 'jfgig',
+        username: name,
+        email: email,
+        password: password,
+        createdAt: '12/10/2022 12:00 PM',
+        isLoggedIn: false
+    })
+    return 'User Successfully Registered';
+}
+
+console.log(signUp('Rahul', 'thomas@thomas.com', 'password'));
+
+/* b. */
+function signIn(email, password) {
+    for(let i = 0; i < users.length; i++) {
+        if(users[i].email === email) {
+            if(users[i].password === password) {
+                return 'Successfully Registered'
+            }
+            else {
+                return 'Wrong Password'
+            }
+        }
+    }
+    return 'User Not Registered...'
+}
+
+console.log(signIn('thomas@thomas.com', '123333'))
