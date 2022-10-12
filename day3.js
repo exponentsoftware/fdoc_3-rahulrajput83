@@ -188,7 +188,7 @@ const products = [
         description: 'MacPro: System Darwin',
         price: 2500,
         ratings: [],
-        likes: ['fg12cy']
+        likes: ['fg12cy', 'kshdgdi', 'dfhiugf', 'dhgdkjd']
     },
     {
         _id: 'hedfcg',
@@ -224,8 +224,33 @@ function averageRating(productId) {
                 totalRatings++;
             }
             return (sumRating / totalRatings)
-            
+
         }
     }
 }
-console.log(`Average Rating: ${averageRating('eedfcf')}`)
+console.log(`Average Rating: ${averageRating('eedfcf')}`);
+
+/* c. likeProduct */
+function likeProduct(productId, userId) {
+    for (let i = 0; i < products.length; i++) {
+        if (products[i]._id === productId) {
+            if (products[i].likes.length === 0) {
+                products[i].likes.push(userId);
+                return 'Like Added';
+            }
+            else {
+                for(let j = 0; j < products[i].likes.length; j++){
+                    if(products[i].likes[j] === userId) {
+                        products[i].likes.splice(j, 1)
+                        return 'Like removed'
+                    }
+                }
+                products[i].likes.push(userId);
+                return 'Like Added';
+            }
+        }
+
+    }
+}
+console.log(likeProduct('aegfal', 'dhgdkjd'))
+console.log(products[1].likes)
