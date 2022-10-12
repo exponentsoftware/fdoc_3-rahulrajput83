@@ -54,4 +54,26 @@ newStudent.skills.frontEnd.push({skill: 'Bootstrap', lavel: 8});
 newStudent.skills.backEnd.push({skill: 'Express', lavel: 9});
 newStudent.skills.dataBase.push({skill: 'SQL', lavel: 8});
 newStudent.skills.dataScience.push('SQL')
-console.log(newStudent)
+/* console.log(newStudent) */
+
+/* Use the student object to solve the following questions:
+   a. Find the length of student object keys
+   b. Find the length of the student object values
+   c. Find the length of skills object keysuyb 
+   d. check if the student object has graphicDesign property
+   e. Iterate the keys of the student object */
+
+
+console.log(Object.keys(newStudent).length);
+console.log(Object.values(newStudent).length);
+
+/* let ValLen = 0;
+Object.values(newStudent).forEach(() => {
+    len++;
+});
+console.log(ValLen);
+let keyLen = 0;
+Object.keys(newStudent).forEach(() => {
+    len++;
+});
+ */
