@@ -64,9 +64,6 @@ newStudent.skills.dataScience.push('SQL')
    e. Iterate the keys of the student object */
 
 
-console.log(Object.keys(newStudent).length);
-console.log(Object.values(newStudent).length);
-
 /* let ValLen = 0;
 Object.values(newStudent).forEach(() => {
     len++;
@@ -77,3 +74,9 @@ Object.keys(newStudent).forEach(() => {
     len++;
 });
  */
+
+/* a. */ console.log(Object.keys(newStudent).length);
+/* b. */ console.log(Object.values(newStudent).length);
+/* c. */ console.log(Object.values(newStudent.skills).length);
+/* d. */ console.log(newStudent.hasOwnProperty('graphicDesign'));
+/* e. */ Object.keys(newStudent).forEach((e) => console.log(e));
